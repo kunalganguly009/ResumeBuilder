@@ -1,0 +1,302 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alfa+Slab+One&family=Amaranth&family=Creepster&family=Fredoka+One&family=Goldman&family=Indie+Flower&family=Itim&family=Lato&family=Luckiest+Guy&family=Mitr:wght@200&family=Nanum+Myeongjo&family=PT+Serif:wght@400;700&family=Prata&family=Readex+Pro&family=Rubik+Beastly&family=Source+Serif+Pro:ital,wght@1,900&family=Titan+One&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <link rel="stylesheet" href="/css/form.css" />
+</head>
+
+<body>
+  <div id="mainCtnrForm">
+    <nav>
+      {{#each bioData}}
+
+      <button id="logout"><span class="material-icons"> <a href="/logout" target="_blank">logout</a></span></button>
+
+      <button><a href="/resume/{{{Email}}} " target="_blank">My Resume</a></button>
+
+      <button> <a class="btn btn-primary btncss" target="_blank" id="share"
+          href="https://web.whatsapp.com/send?text=VisualResume.com/{{Email}}">share</a></button>
+
+      {{/each}}
+    </nav>
+    <div id="subCtnrForm">
+      <!-- <h1>Get in touch</h1> -->
+      <form action="/formSubmit" method="post" id="resumeForm" autocomplete="off" enctype="multipart/form-data">
+        <!-- {{!-- <button type="submit"><a href="/resume">my resume</a></button> --}} -->
+        {{#each bioData}}
+        <div id="leftForm">
+          <!-- {{!-- <a href="/{{Email}}">{{Email}}</a> --}} -->
+          <table>
+            <tr>
+              <td id="profilePic">
+
+
+                {{!-- {{#if bioData.profilePic.data}}
+                <img src="data:image/{{ bioData.profilepic.contentType }};base64,{{ toString bioData.profilePic.data }}">
+                {{else}}
+                
+                <img src="./images/20EEBCS054_photo.jpg" alt="" srcset="">
+                
+                {{/if}} --}}
+               
+              </td>
+            </tr>
+            <tr>
+              <td><input type="file" name="profilepicture"  value="./images/20EEBCS054_photo.jpg" accept="image/png, image/jpeg"></td>
+            </tr>
+            <tr>
+              <th class="clr">
+                <label for="About_me" class="">About Me</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <textarea name="About_me" id="About_me" cols="40" rows="10" value="{{biodata.About_me}}">
+                      {{biodata.About_me}}</textarea>
+              </td>
+            </tr>
+            <tr>
+              <th><label>contact me</label></th>
+            </tr>
+
+            <tr>
+              <td><span class=""> <i class="fa fa-envelope" aria-hidden="true"></i> </span></td>
+              <td>
+                <input type="text" name="userEmail" id="" value="{{Email}}" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td><span class=""> <i class="fab fa-linkedin"></i> </span></td>
+              <td>
+                <input type="text" name="ln" id="" value="{{biodata.ln}}" />
+              </td>
+            </tr>
+            <tr>
+              <td><span class="material-icons"> <i class="fab fa-github"> </span></td>
+              <td>
+                <input type="text" name="github" id="" value="{{biodata.github}}" />
+              </td>
+            </tr>
+            <tr>
+              <td><span class="material-icons"> <i class="fab fa-twitter"> </span></td>
+              <td>
+                <input type="text" name="twtr" id="" value="{{biodata.twtr}}" />
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="rightForm">
+          <table>
+            <tr>
+              <th class="formHeader mainHeds"><label>Name & Title</label></th>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="fname">Full Name</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="fname" name="fname" value="{{biodata.fname}}" placeholder="Kunal Ganguly" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="jobtitle">Job Title</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="jobtitle" name="jobtitle" value="{{biodata.jobtitle}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader mainHeds"><label>internship</label></th>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="years_1">years</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="years_1" name="years_1" value="{{biodata.years_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="title_1">title</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="title_1" name="title_1" value="{{biodata.title_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="companyname_1">company name</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="companyname_1" name="companyname_1" value="{{biodata.companyname_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader mainHeds"><label>Experience</label></th>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="years_2">years</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="years_2" name="years_2" value="{{biodata.years_2}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="title_2">title</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="title_2" name="title_2" value="{{biodata.title_2}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="companyname_2">company name</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="companyname_2" name="companyname_2" value="{{biodata.companyname_2}}" />
+              </td>
+            </tr>
+
+            <tr>
+              <th class="formHeader mainHeds"><label>gradution</label></th>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="clgname_1">name of college</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="clgname_1" name="clgname_1" value="{{biodata.clgname_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="degree_1">degree</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="degree_1" name="degree_1" value="{{biodata.degree_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="duration_1">duration</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="duration_1" name="duration_1" value="{{biodata.duration_1}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader mainHeds">
+                <label>post gradution</label>
+              </th>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="clgname_2">name of college</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="clgname_2" name="clgname_2" value="{{biodata.clgname_2}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="degree_2">degree</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="degree_2" name="degree_2" value="{{biodata.degree_2}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader">
+                <label for="duration_2">duration</label>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="duration_2" name="duration_2" value="{{biodata.duration_2}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader mainHeds"><label>skills</label></th>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="skill_1">skill 1</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="skill_1" name="skill_1" value="{{biodata.skill_1}}" />
+                <input type="range" class="skill_range" name="skill_1_range" min="0" max="10"
+                  value="{{biodata.skill_1_range}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="skill_2">skill 2</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="skill_2" name="skill_2" value="{{biodata.skill_2}}" />
+                <input type="range" class="skill_range" name="skill_2_range" min="0" max="10"
+                  value="{{biodata.skill_2_range}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="skill_3">skill 3</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="skill_3" name="skill_3" value="{{biodata.skill_3}}" />
+                <input type="range" class="skill_range" name="skill_3_range" min="0" max="10"
+                  value="{{biodata.skill_3_range}}" />
+              </td>
+            </tr>
+            <tr>
+              <th class="formHeader"><label for="skill_4">skill 4</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" id="skill_4" name="skill_4" value="{{biodata.skill_4}}" />
+                <input type="range" class="skill_range" name="skill_4_range" min="0" max="10"
+                  value="{{biodata.skill_4_range}}" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button type="submit">save</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        {{/each}}
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

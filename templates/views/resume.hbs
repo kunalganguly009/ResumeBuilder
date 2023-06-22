@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alfa+Slab+One&family=Amaranth&family=Creepster&family=Fredoka+One&family=Goldman&family=Indie+Flower&family=Itim&family=Lato&family=Luckiest+Guy&family=Mitr:wght@200&family=Nanum+Myeongjo&family=PT+Serif:wght@400;700&family=Prata&family=Readex+Pro&family=Rubik+Beastly&family=Source+Serif+Pro:ital,wght@1,900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/resume.css">
+  </head>
+
+  <body>
+    <div id="resumeCtnr">
+       {{#each bioData}}
+      <div id="left">
+        <div id="profileImg">
+          <div id="profileImgLayer"></div>
+          <div id="profileImgMain">
+             <img src="data:image/{{ biodata.profilepic.contentType }};base64,{{ toString biodata.profilePic.data }}">
+            
+                {{!-- <img
+                  src="data:image/{{ bioData.profilepic.contentType }};base64,{{ toString bioData.profilePic.data }}"> --}}
+               
+          </div>
+        </div>
+        <div id="aboutMe">
+          <header>About Me</header>
+          <div id="aboutMeContent">
+            <span>
+              <p>{{biodata.About_me}}</p>
+            </span>
+          </div>
+        </div>
+        <div id="contactMe">
+          <header>Contact Me</header>
+          <div id="contactMeIcons">
+            <span class="">
+              <a href="{{Email}}" target="_blank" ><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </span>
+            <span class="">
+              <a href="{{biodata.ln}}" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </span>
+            <span class="material-icons">
+              <a href="{{biodata.github}}" target="_blank"><i class="fab fa-github"></i></a>
+            </span>
+            <span class="material-icons"
+              ><a href="{{biodata.twtr}}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div id="userNameTitle">
+          <div id="userName" class="TITLES">
+            <span>
+              <p>{{biodata.fname}}</p>
+            </span>
+          </div>
+          <div id="title" class="TITLES">
+            <span>
+              <p>{{biodata.jobtitle}}</p>
+            </span>
+          </div>
+        </div>
+        <div id="Experience">
+          <header class="TITLES"><span>Experience</span></header>
+          <div id="ExperienceData">
+            <div id="ExperienceData1">
+              <div id="ExperienceData-1-Time"><p>{{biodata.years_1}}</p></div>
+              <div id="ExperienceData-1-title"><p>{{biodata.title_1}}</p></div>
+              <div id="ExperienceData-1-compnayName">
+                <p>{{biodata.companyname_1}}</p>
+              </div>
+            </div>
+            
+            <div id="ExperienceData2">
+              <div id="ExperienceData-2-Time"><p>{{biodata.years_2}}</p></div>
+              <div id="ExperienceData-2-title"><p>{{biodata.title_2}}</p></div>
+              <div id="ExperienceData-2-compnayName">
+                <p>{{biodata.companyname_2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="education">
+          <header class="TITLES"><span>Education</span></header>
+          <div id="eduData">
+            <div id="eduData1">
+              <div id="eduData-1-Degree">
+                <p>{{biodata.clgname_1}}</p>
+              </div>
+
+              <div id="eduData-1-College">
+                <p>{{biodata.degree_1}}</p>
+              </div>
+
+              <div id="eduData-1-Year">
+                <p>{{biodata.duration_1}}</p>
+              </div>
+            </div>
+            <div id="eduData2">
+              <div id="eduData-2-Degree">
+                <p>{{biodata.clgname_2}}</p>
+              </div>
+
+              <div id="eduData-2-College">
+                <p>{{biodata.degree_2}}</p>
+              </div>
+
+              <div id="eduData-2-Year">
+                <p>{{biodata.duration_2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="skills">
+          <header class="TITLES"><span>Skills</span></header>
+          <div id="skillsData">
+            <div id="skillsData1">
+              <div id="skillsData-1-HeadingRange1-1">
+                <div id="skillsData1Heading1-1">
+                  <p>{{biodata.skill_1}}</p>
+                </div>
+                <div id="skillsData1Range1-1">
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="{{biodata.skill_1_range}}"
+                    class="slider"
+                    id="myRange"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div id="skillsData-1-HeadingRange1-2">
+                <div id="skillsData1Heading1-2">
+                  <p>{{biodata.skill_2}}</p>
+                </div>
+                <div id="skillsData1Range1-2">
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="{{biodata.skill_2_range}}"
+                    class="slider"
+                    id="myRange"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="skillsData2">
+              <div id="skillsData-2-HeadingRange2-1">
+                <div id="skillsData1Heading2-1">
+                  <p>{{biodata.skill_3}}</p>
+                </div>
+                <div id="skillsData1Range2-1">
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="{{biodata.skill_3_range}}"
+                    class="slider"
+                    id="myRange"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div id="skillsData-2-HeadingRange2-2">
+                <div id="skillsData1Heading2-2">
+                  <p>{{biodata.skill_4}}</p>
+                </div>
+                <div id="skillsData1Range2-2">
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    value="{{biodata.skill_4_range}}"
+                    class="slider"
+                    id="myRange"
+                    readonly
+                  />
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}} 
+    </div>
+  </body>
+</html>

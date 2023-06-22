@@ -1,0 +1,636 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #resumeCtnr,
+  #left,
+  #profileImg,
+  #aboutMe header,
+  #contactMeIcons,
+  #contactMe header,
+  #right,
+  #userNameTitle,
+  #Experience,
+  #ExperienceData,
+  #education,
+  #eduData,
+  #skills,
+  #skillsData,
+  #ExperienceData1,
+  #ExperienceData2,
+  #eduData1,
+  #eduData2,
+  #skillsData1,
+  #skillsData2,
+  #skillsData-1-HeadingRange1-1,
+  #skillsData-1-HeadingRange1-2,
+  #skillsData-2-HeadingRange2-1,
+  #skillsData-2-HeadingRange2-2,
+  #skillsData1Range1-1,
+  #skillsData1Range1-2,
+  #skillsData1Range2-1,
+  #skillsData1Range2-2,
+  #skillsData1Heading1-1,
+  #skillsData1Heading1-2,
+  #skillsData1Heading2-1,
+  #skillsData1Heading2-2,
+  #education #eduData1 #eduData-1-Year,
+  #education #eduData1 #eduData-1-Degree,
+  #education #eduData1 #eduData-1-College,
+  #education #eduData2 #eduData-2-Year,
+  #education #eduData2 #eduData-2-Degree,
+  #education #eduData2 #eduData-2-College,
+  #ExperienceData-1-title,
+  #ExperienceData-1-compnayName,
+  #ExperienceData-1-Time,
+  #ExperienceData-2-compnayName,
+  #ExperienceData-2-Time,
+  #ExperienceData-2-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #resumeCtnr {
+    height: 100vh;
+    width: 100%;
+  }
+
+  #left {
+    height: 100%;
+    width: 25%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* background: #03a8f430; */
+    /* background: linear-gradient(
+      144deg,
+      #af40ff3d,
+      #5a42f34e 50%,
+      #00dbeb3e
+    ); */
+
+    flex-direction: column;
+  }
+
+  #profileImg {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: none;
+  }
+
+  #profileImgLayer {
+    height: 170px;
+    width: 170px;
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+
+  #profileImgMain {
+    height: 158px;
+    width: 158px;
+    border-radius: 50%;
+    position: absolute;
+    /* background-color: aquamarine; */
+  }
+  
+  #profileImgMain img {
+    height: 158px;
+    width: 158px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  #right {
+    height: 100%;
+    width: 75%;
+    /* background-color: blue; */
+    /* background: #03a8f430; */
+    flex-direction: column;
+  }
+
+  #profileImg {
+    height: 30%;
+    width: 100%;
+    /* background-color: pink; */
+  }
+
+  #aboutMe {
+    height: 50%;
+    width: 100%;
+    /* background-color: green; */
+  }
+
+  #aboutMe header {
+    height: 20%;
+    width: 100%;
+    /* background-color: bisque; */
+  }
+
+  #aboutMe #aboutMeContent {
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    /* padding-top: 30px; */
+    text-align: center;
+  }
+
+  #aboutMe #aboutMeContent span p {
+    font-family: "Itim", cursive;
+    /* color: white; */
+    font-size: 18px;
+    /* margin-top: -7px; */
+  }
+
+  #contactMe {
+    height: 20%;
+    width: 100%;
+    /* background-color: aqua; */
+  }
+
+  #contactMe header {
+    height: 40%;
+    width: 100%;
+    /* background-color: cadetblue; */
+  }
+
+  #contactMe #contactMeIcons {
+    height: 60%;
+    width: 100%;
+    /* background-color: rgba(45, 213, 219, 0.219); */
+    justify-content: space-evenly;
+  }
+
+  #contactMe #contactMeIcons span {
+    font-size: 25px;
+    color: white;
+    /* height: 100%; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 81% 19% 61% 39% / 31% 68% 32% 69%;
+    background: linear-gradient(
+      45deg,
+      #1ee0f5c4 20%,
+
+      #f633c9a8 90%
+    );
+  }
+
+  #userNameTitle {
+    height: 25%;
+    width: 100%;
+    /* background-color: rgb(187, 0, 255); */
+    flex-direction: column;
+  }
+  
+  #userName {
+    height: 60%;
+    width: 100%;
+    /* background-color: aquamarine; */
+    font-family: "PT Serif", serif;
+    color: #5b42f3;
+    
+   
+  }
+  
+  #userName span p {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: "PT Serif", serif;
+ 
+  }
+
+  #title {
+    height: 40%;
+    width: 100%;
+    /* background-color: rgb(13, 207, 87); */
+  }
+
+  #title span p {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: "Nanum Myeongjo", serif;
+    color: black;
+  }
+
+  #Experience,
+  #education,
+  #skills {
+    height: 25%;
+    width: 100%;
+    /* background-color: rgb(255, 247, 0); */
+    flex-direction: column;
+  }
+
+  #Experience header,
+  #education header,
+  #skills header {
+    height: 30%;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+
+  #ExperienceData,
+  #eduData,
+  #skillsData {
+    height: 70%;
+    width: 100%;
+    /* background-color: rgb(197, 193, 75); */
+  }
+
+  #ExperienceData #ExperienceData1,
+  #eduData #eduData1,
+  #skillsData #skillsData1 {
+    height: 100%;
+    width: 50%;
+    /* background-color: antiquewhite; */
+  }
+
+  #ExperienceData #ExperienceData2,
+  #eduData #eduData2,
+  #skillsData #skillsData2 {
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(122, 243, 237); */
+  }
+
+  #education {
+    height: 25%;
+    width: 100%;
+    /* background-color: rgb(110, 112, 112); */
+  }
+
+  #education #eduData1,
+  #education #eduData2 {
+    flex-direction: column;
+  }
+
+  #education #eduData1 #eduData-1-Year,
+  #education #eduData1 #eduData-1-Degree,
+  #education #eduData1 #eduData-1-College,
+  #education #eduData2 #eduData-2-Year,
+  #education #eduData2 #eduData-2-Degree,
+  #education #eduData2 #eduData-2-College {
+    flex-direction: column;
+    text-align: center;
+    height: 33.33%;
+    width: 100%;
+    font-family: "Mitr", sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    background: #03a8f430;
+    border: 1px solid white;
+  }
+
+  #ExperienceData-1-title,
+  #ExperienceData-1-compnayName,
+  #ExperienceData-1-Time,
+  #ExperienceData-2-compnayName,
+  #ExperienceData-2-Time,
+  #ExperienceData-2-title {
+    height: 33%;
+    width: 100%;
+    font-family: "Mitr", sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    background: #03a8f430;
+    border: 1px solid white;
+  }
+
+  #skills {
+    height: 25%;
+    width: 100%;
+    /* background-color: rgb(255, 128, 0); */
+    /* border: 2px solid black; */
+  }
+
+  #skills #skillsData1,
+  #skills #skillsData2,
+  #ExperienceData1,
+  #ExperienceData2 {
+    flex-direction: column;
+  }
+
+  #skills #skillsData-1-HeadingRange1-1,
+  #skills #skillsData-1-HeadingRange1-2,
+  #skills #skillsData-2-HeadingRange2-1,
+  #skills #skillsData-2-HeadingRange2-2 {
+    height: 50%;
+    width: 100%;
+    /* border: 1px solid white; */
+    justify-content: space-evenly;
+    background: #03a8f430;
+    border: 1px solid white;
+  }
+
+ 
+
+  #skillsData1Heading1-1,
+  #skillsData1Heading1-2,
+  #skillsData1Heading2-1,
+  #skillsData1Heading2-2 {
+    width: 40%;
+    height: 100%;
+    /* background-color: rgba(0, 255, 255, 0.477); */
+  }
+
+  #skillsData1Range1-1,
+  #skillsData1Range1-2,
+  #skillsData1Range2-1,
+  #skillsData1Range2-2 {
+    width: 270px;
+    height: 100%;
+    /* background-color: rgba(255, 255, 0, 0.66); */
+  }
+
+  #skillsData1Heading1-1 p,
+  #skillsData1Heading1-2 p,
+  #skillsData1Heading2-1 p,
+  #skillsData1Heading2-2 p {
+    font-family: "Goldman", cursive;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 550;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    /* width:270px; */
+    height: 5px;
+    background: linear-gradient(
+      45deg,
+      #1ee0f5c4 20%,
+
+      #f633c9a8 90%
+    );
+    /* border: 2px solid red; */
+    border-radius: 3px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #03a9f4;
+    margin-top: -4px;
+  }
+
+  input[type="range"]:focus {
+    outline: none;
+  }
+
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: linear-gradient(45deg, #f633c9a8 90%, #1ee0f5c4 20%);
+  }
+
+  .TITLES {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .TITLES span {
+    margin-left: 30px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 550;
+    font-family: "Goldman", cursive;
+    text-transform: uppercase;
+    color: #03a9f4;
+  }
+
+  header {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 550;
+    font-family: "Goldman", cursive;
+    text-transform: uppercase;
+    color: #03a9f4;
+  }
+
+  
+@media screen and (max-width: 824px)  {
+
+  #resumeCtnr{
+    flex-direction: column;
+   height: 200vh;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+  
+  }
+  #left{
+    height: 100%;
+    width: 80%;
+    
+  }
+  #profileImg{
+
+    height: 120px;
+    width: 120px;
+  
+    position: relative;
+   
+  }
+  #profileImgLayer {
+    height: 120px;
+    width: 120px;
+   position: absolute;
+  }
+  #profileImgMain {
+    height: 110px;
+    width: 110px;
+  }
+  #profileImgMain img {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+   
+  }
+
+  #left #aboutMe header ,#left #contactMe header {
+    
+    font-size: 20px;
+  }
+  #left #aboutMe #aboutMeContent p ,#left #contactMe #contactMeIcons a {
+  font-size: 25px;
+
+}
+#left #contactMe #contactMeIcons span{
+  height: 45px;
+  width: 45px;
+}
+    #right{
+     height: 100%;
+     width: 98%;
+     
+    }
+    #right p{
+
+      font-size: 13px;
+    }
+    #right #title span p  {
+      font-size: 20px;
+      
+    }
+    #right #userName span p{
+      font-size: 30px;
+
+    }
+   #userName {
+    /* justify-content: center; */
+   }
+   
+
+
+
+  }
+  
+  
+  @media screen and (max-width: 625px) {
+    
+    #resumeCtnr{
+    overflow: scroll;
+   }
+ 
+
+  #skillsData{
+    flex-direction: column;
+    
+  }
+  #skillsData  #skillsData1 , #skillsData  #skillsData2{
+    
+    width: 100%;
+    height: 100%;
+    
+  }
+  #skills header span , #right #userName span , #education header span , #Experience header span , #title span{
+    /* background-color: #00ddeb; */
+   margin-left: 0;
+  }
+  
+}
+
+@media screen and (max-width: 363px) {
+ 
+  #resumeCtnr{
+    flex-direction: column;
+   height: 250vh;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+   width: 98%;
+   overflow: scroll;
+ 
+  }
+
+
+  #left #aboutMe header ,#left #contactMe header {
+    
+    font-size: 17px;
+  }
+  #left #aboutMe #aboutMeContent p ,#left #contactMe #contactMeIcons a {
+  font-size: 20px;
+
+}
+#left #contactMe #contactMeIcons span{
+  height: 35px;
+  width: 35px;
+}
+
+
+
+
+  
+  
+
+
+  #right p{
+
+    font-size: 13px;
+  }
+  #right #title span p  {
+   
+    font-size: 15px;
+    
+  }
+  #right #userName span p{
+    font-size: 20px;
+  
+    
+  }
+  #right #userName{
+    /* background-color: #af40ff; */
+    height: min-content;
+    width:98%;
+  }
+  
+  #skills header span , #right #userName span , #education header span , #Experience header span , #title span{
+   /* background-color: #00ddeb; */
+  margin-left: 0;
+  
+  /* margin-bottom: 0; */
+  height: 10vh;
+  width: 98%;
+}
+#title span{
+  /* background-color: #00ddeb; */
+  margin-bottom: -15vh;
+  margin-top: -10vh;
+  
+}
+#Experience  , #education{
+  
+  height: fit-content;
+  width: 98%;
+  margin-bottom: 20px;
+  }
+#skills{
+  width: 98%;
+  height: 60vh;
+
+  /* margin-top: 2vh; */
+}
+#skills header{
+ height: 10vh;
+  /* background-color: #00ddeb; */
+}
+  
+  
+  #skillsData-1-HeadingRange1-1 , #skillsData-1-HeadingRange1-2 , #skillsData-2-HeadingRange2-1 , #skillsData-2-HeadingRange2-2{
+    
+  
+  flex-direction: column;
+}
+
+  #Experience #ExperienceData , #education #eduData {
+    
+    flex-direction: column;
+    
+  }
+  
+  #Experience #ExperienceData1 ,  #Experience #ExperienceData2 ,#education #eduData1 ,#education #eduData2  {
+    width: 100%;
+    height: 100%;
+
+  }
+
+
+  
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+      <link rel="stylesheet" href="/css/LoginSignupCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Abril+Fatface&family=Alfa+Slab+One&family=Amaranth&family=Creepster&family=Fredoka+One&family=Goldman&family=Indie+Flower&family=Itim&family=Lato&family=Luckiest+Guy&family=Mitr:wght@200&family=Nanum+Myeongjo&family=PT+Serif:wght@400;700&family=Prata&family=Readex+Pro&family=Righteous&family=Rubik+Beastly&family=Source+Serif+Pro:ital,wght@1,900&family=Titan+One&display=swap" rel="stylesheet">
+    </head>
+  <body>
+    <div class="main">
+      <div id="siteName">VisualResume.com</div>
+      <div id="btns"><button class="button-63" role="button" onclick="LoginSignupToggle()">Sign Up</button></div>
+      <div id="subDivCtnr">
+        <div class="subDiv" id="colorDiv"><div class="shape"></div></div>
+        <div class="subDiv" id="transDiv"><div class="shape1"></div></div>
+        
+        <div class="subDiv login" id="login">
+          <header><h1>Login</h1></header>
+          <div id="loginForm">
+            <form action="/login" method="POST" target="_blank">
+              <div id="userName">
+                <span class="material-icons"> person </span>
+                <input placeholder="Email" type="email" name="Email" />
+              </div>
+              <div id="password">
+                <span class="material-icons"> lock </span>
+                <input placeholder="password" type="password" name="Password"/>
+              </div>
+              <button id="loginBtn">LOGIN</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="subDiv signup" id="signup">
+          <header><h1>Sign Up</h1></header>
+          <div id="signupForm">
+            <form action="/signup" method="POST">
+              <div id="userName">
+                <span class="material-icons"> person </span>
+                <input name="Email" placeholder="Email ID" type="email" />
+              </div>
+              <div id="password">
+                <span class="material-icons"> lock </span>
+                <input placeholder="password" type="password" name="Password"/>
+              </div>
+              <button type="submit" id="signUpBtn" >SIGN UP</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="subDiv" id="userIcon">
+          <span class="material-icons" >
+            account_circle
+          </span>
+        </div>
+      </div>
+    </div>
+    <script>
+      function LoginSignupToggle() {
+        let button = document.getElementsByClassName("button-63")[0];
+        var login = document.getElementById("login");
+        var signup = document.getElementById("signup");
+
+        login.classList.toggle("loginDisable");
+        signup.classList.toggle("SignupEnable");
+
+        if (button.value == "Sign Up") {
+          document.getElementsByClassName("button-63")[0].value = "LOGIN";
+          console.log("1");
+          button.textContent = "SIGN UP"
+        } else {
+          document.getElementsByClassName("button-63")[0].value = "Sign Up";
+          console.log("2");
+          button.textContent = "LOGIN"
+        }
+
+        // if (document.getElementById("loginBtn").innerText == "LOGIN") {
+        //   document.getElementsByClassName("button-63")[0].innerText="SIGN UP"
+
+        // }
+      }
+    </script>
+  </body>
+</html>
